@@ -1,72 +1,60 @@
-:root {
-  --dsc-color-bg-primary: #e8e8e8;
-  --dsc-color-bg-secondary: #ffe500;
-  --dsc-color-bg-tertiary: #636363;
-  --dsc-color-bg-quaternary: #0caf1d;
+@import url("styles.css");
 
-  --dsc-color-card-bg: #fff;
-  --dsc-color-card-border: #d9d9d9;
-
-  --dsc-color-btn-primary: #3483fa;
-  --dsc-color-btn-inverse: #fff;
-
-  --dsc-color-font-primary: #636363;
-  --dsc-color-font-secondary: #0caf1d;
-  --dsc-color-font-tertiary: #fff;
-  --dsc-color-font-placeholder: #d9d9d9;
-
-  --dsc-color-error: #f33;
-}
-
-#cart-container {
+#cart-container-section {
   padding: 20px 0;
 }
 
-.cart-total-container {
+.dsc-cart-total-container {
   padding: 10px 20px;
-}
-
-.cart-total-container h3 {
-  color: var(--dsc-color-bg-quaternary);
-  font-size: 16px;
-  font-weight: 700;
-  text-align: right;
-}
-
-.cart-item-container {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
 }
 
-.cart-item-container img {
+.dsc-cart-total-container h2 {
+    color: var(--dsc-color-font-primary);
+    font-size: 16px;
+}
+
+.dsc-cart-total-container h3 {
+  color: var(--dsc-color-bg-quaternary);
+  font-size: 16px;
+}
+
+.dsc-cart-item-container {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dsc-cart-item-container img {
   width: 78px;
   height: 78px;
 }
 
-.cart-item-left {
+.dsc-cart-item-left {
   display: flex;
 }
 
-.cart-item-right {
-    padding: 10px 0;
+.dsc-cart-item-right {
+    padding-bottom: 10px;
 }
 
-.cart-item-right  h3 {
+.dsc-cart-item-right  h3 {
     color: var(--dsc-color-bg-quaternary);
     font-size: 12px;
 }
 
-.cart-item-description {
+.dsc-cart-item-description {
     padding: 10px 0;
     color: var(--dsc-color-font-primary);
+    margin-left: 20px;
 }
 
-.cart-item-description h3 {
+.dsc-cart-item-description h3 {
     font-size: 12px;
 }
 
-.cart-item-quantity-container {
+.dsc-cart-item-quantity-container {
     display: flex;
     flex-direction: row;
     font-size: 16px;
@@ -75,11 +63,24 @@
     max-width: 32px;
 }
 
-.cart-item-quantity-btn {
+.dsc-cart-item-quantity-btn {
     color: var(--dsc-color-btn-primary);
     cursor: pointer;
 }
 
-.cart-item-quantity-container p {
+.dsc-cart-item-quantity-container p {
     margin: auto;
+}
+
+@media (min-width: 576px) {
+
+  .dsc-cart-item-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .dsc-cart-item-right  h3 {
+    padding-top: 10px;
+  }
+
 }

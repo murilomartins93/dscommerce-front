@@ -41,25 +41,44 @@ main {
     padding: 0 20px;
 }
 
+/* ------------------------------------------------------------- */
+/* Generic Styles */
+
+.dsc-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.dsc-mb20 {
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------------- */
+/* Header Styles */
+
 header {
     background-color: var(--dsc-color-bg-secondary);
     height: 70px;
     display: flex;
     align-items: center;
+    padding: 0 20px;
 }
 
 nav {
-    color: var(--dsc-color-bg-tertiary);
+    color: var(--dsc-color-font-primary);
     display: flex;
     align-items: center;
     justify-content: space-between;
+} 
+
+nav h1 {
+    font-size: 24px;
 }
 
-.dsc-container {
-    width: 100%;
-    padding: 20px;
-    max-width: 960px;
-    margin: 0 auto;
+nav a {
+    font-size: 14px;
+    font-weight: 700;
 }
 
 .dsc-navbar-right {
@@ -82,23 +101,37 @@ nav {
     align-items: center;
 }
 
+/* ------------------------------------------------------------- */
+/* Card Styles */
+
 .dsc-card {
     border: 1px solid var(--dsc-color-card-border);
     border-radius: 4px;
     background-color: var(--dsc-color-card-bg);
 }
 
-.line-bottom {
+.dsc-line-bottom {
     border-bottom: 1px solid var(--dsc-color-card-border);
 }
 
-.btn-page-container {
-    width: 220px;
+/* ------------------------------------------------------------- */
+/* Button Styles */
+
+.dsc-btn-page-container {
+    width: 100%;
     display: grid;
     gap: 20px;
 }
 
-.btn {
+@media (min-width: 576px) {
+
+    .dsc-btn-page-container {
+        width: 220px;
+    }
+
+}
+
+.dsc-btn {
     border-radius: 4px;
     height: 42px;
     font-size: 16px;
@@ -108,14 +141,11 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-.btn:hover {
+.dsc-btn:hover {
     background-color: var(--dsc-color-btn-inverse);
     color:var(--dsc-color-btn-primary);
     border: 1px solid var(--dsc-color-btn-primary);
-}
-
-.dsc-mb20 {
-    margin-bottom: 20px;
 }
