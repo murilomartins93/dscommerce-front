@@ -81,22 +81,30 @@ main {
 /* Header Styles */
 
 header {
-  background-color: var(--dsc-color-bg-secondary);
   height: 70px;
   display: flex;
   align-items: center;
   padding: 0 20px;
 }
 
-nav {
+.dsc-header-client {
+  background-color: var(--dsc-color-bg-secondary);
   color: var(--dsc-color-font-primary);
+}
+
+.dsc-header-admin {
+  background-color: var(--dsc-color-bg-quaternary);
+  color: var(--dsc-color-font-tertiary);
+}
+
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 nav h1 {
-  font-size: 24px;
+  font-size: 16px;
 }
 
 nav a {
@@ -124,6 +132,16 @@ nav a {
   align-items: center;
 }
 
+.dsc-menu-item p {
+  display: none;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.dsc-menu-item-active {
+  font-weight: 700;
+}
+
 .dsc-logged-user {
   display: flex;
   flex-direction: column;
@@ -132,6 +150,17 @@ nav a {
 
 .dsc-logged-user p {
   font-size: 12px;
+}
+
+@media (min-width: 576px) {
+  nav h1 {
+    font-size: 24px;
+  }
+
+  .dsc-menu-item p {
+    display: unset;
+    margin-left: 5px;
+  }
 }
 
 /* ------------------------------------------------------------- */
